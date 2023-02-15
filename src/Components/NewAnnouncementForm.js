@@ -1,10 +1,10 @@
 
 import React from 'react'
 import {useState} from 'react'
-import {useNavigate, Link} from "react-rounter-dom"
+import {useNavigate, Link} from "react-router-dom"
 import axios from 'axios'
 
-const API = REACT_APP_API_URL
+const API = process.env.REACT_APP_API_URL
 
 function NewAnnouncementForm() {
   
@@ -25,11 +25,11 @@ function NewAnnouncementForm() {
 
   const addAnnouncement =(newAnnouncement) => {
     axios
-    .post(`${API}/announcments`, newAnnouncement)
+    .post(`${API}/announcements`, newAnnouncement)
     .then( (()=>{
-      navigate(`/announcments`)
+      navigate(`/announcements`)
     }),
-    (error) => console.error(error)
+    (error) => console.error("new announcement error = ",error)
     )
     .catch((c)=>{
       console.warn('catch', c)
@@ -41,13 +41,17 @@ function NewAnnouncementForm() {
     setAnnouncement({ ...announcement, [event.target.id]: event.target.value });
   };
 
-  const handleCheckboxChange = () => {
-    setAnnouncement({ ...announcement, is_favorite: !announcement.is_favorite });
+  const handleCheckboxChange1 = () => {
+    setAnnouncement({ ...announcement, is_member: !announcement.is_member });
+  };
+
+  const handleCheckboxChange2 = () => {
+    setAnnouncement({ ...announcement, is_public: !announcement.is_public });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addSnnouncement(announcement);
+    addAnnouncement(announcement);
   };
   
   
@@ -104,7 +108,7 @@ function NewAnnouncementForm() {
               onChange={handleTextChange}
             /> <br/><br/>
             
-            <label htmlFor="date">Time:</label>
+            <label htmlFor="date">Date:</label>
             <input
               id="date"
               type="text"
@@ -124,12 +128,22 @@ function NewAnnouncementForm() {
               onChange={handleTextChange}
             /><br/><br/>
 
+            <label htmlFor="contributor">Contributor:</label>
+            <input
+              id="contributor"
+              type="text"
+              name="contributor"
+              value={announcement.contributor}
+              placeholder="Please enter name of contributor"
+              onChange={handleTextChange}
+            /><br/><br/>
+
             <label htmlFor="is_member">Member:</label> <br/>
             <input
               id="is_member"
               type="checkbox"
-              onChange={handleCheckboxChange}
-              checked={announcements.is_member}
+              onChange={handleCheckboxChange1}
+              checked={announcement.is_member}
             /> <br/><br/><br/>
 
             <label htmlFor="is_public">public:</label>
@@ -137,7 +151,7 @@ function NewAnnouncementForm() {
             <input
               id="is_public"
               type="checkbox"
-              onChange={handleCheckboxChange}
+              onChange={handleCheckboxChange2}
               checked={announcement.is_public}
             /> <br/><br/><br/>
 

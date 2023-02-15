@@ -36,8 +36,11 @@ function EditAnnouncementForm() {
     setAnnouncement({ ...announcement, [event.target.id]: event.target.value });
   };
 
-  const handleCheckboxChange = () => {
-    setAnnouncement({ ...announcement, is_favorite: !announcement.is_favorite });
+  const handleCheckboxChange1 = () => {
+    setAnnouncement({ ...announcement, is_member: !announcement.is_member });
+  };
+  const handleCheckboxChange2 = () => {
+    setAnnouncement({ ...announcement, is_public: !announcement.is_public });
   };
 
   useEffect(() => {
@@ -110,7 +113,7 @@ function EditAnnouncementForm() {
               onChange={handleTextChange}
             /> <br/><br/>
             
-            <label htmlFor="date">Time:</label>
+            <label htmlFor="date">Date:</label>
             <input
               id="date"
               type="text"
@@ -130,12 +133,20 @@ function EditAnnouncementForm() {
               onChange={handleTextChange}
             /><br/><br/>
 
+            <label htmlFor="contributor">Contributor:</label> <br/>
+            <input
+              id="contributor"
+              type="checkbox"
+              onChange={handleTextChange}
+              checked={announcement.contributor}
+            /> <br/><br/><br/>
+
             <label htmlFor="is_member">Member:</label> <br/>
             <input
               id="is_member"
               type="checkbox"
-              onChange={handleCheckboxChange}
-              checked={announcements.is_member}
+              onChange={handleCheckboxChange1}
+              checked={announcement.is_member}
             /> <br/><br/><br/>
 
             <label htmlFor="is_public">public:</label>
@@ -143,7 +154,7 @@ function EditAnnouncementForm() {
             <input
               id="is_public"
               type="checkbox"
-              onChange={handleCheckboxChange}
+              onChange={handleCheckboxChange2}
               checked={announcement.is_public}
             />
         <br/><br/>

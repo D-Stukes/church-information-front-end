@@ -1,3 +1,28 @@
+# GitHub Repository Links and Deployment URLs
+
+## Github Repositories
+
+### Frontend (React)
+#### https://github.com/D-Stukes/church-information-front-end
+
+### Backend (Express):
+#### https://github.com/D-Stukes/church-information-back-end
+
+
+## Deployments
+
+### Frontend (React):
+####
+
+### Backend (Express):
+#### https://church-information-back-end.onrender.com
+
+###  Database (PostGreSql)
+#### https://dashboard.render.com/d/dpg-cfm18a4gqg469krpi50g-a 
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

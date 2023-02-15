@@ -6,6 +6,7 @@ function Index() {
   return (
     <div className='indexPage'>
         <h1 className='indexPageHdg'>List of Church Announcements</h1>
+        <Announcements/>
     </div>
   )
 }

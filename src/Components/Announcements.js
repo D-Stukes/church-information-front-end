@@ -25,7 +25,7 @@ const [announcements, setAnnouncements] = useState([])
       <p className='indexItem'>
         {  
          announcements.map((announcement) =>{
-          return <Announcement key={announcement.id} announcement={announcement} />
+          return <Announcement key={announcement.id} announcement={announcement} id={announcement.id} />
           })
         }
      </p>

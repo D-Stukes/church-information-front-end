@@ -1,13 +1,421 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Meie+Script&display=swap');
+
+
+/* *************** Main and NavBar ************** */
+.App{
+  display: grid;
+  grid-template-rows: .5fr 4fr;
+}
+.main{
+  background-color: rgb(174, 206, 248);
+}
+.navbar{
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: grid;
+  grid-template-columns: .25fr 1fr 3fr .25fr .25fr .25fr;
+  background-image: url("./Images/cross-in-stained-window.png");
+  background-size: cover;
+  width: 100vw;
+  height: 135px;
+  border-bottom: .75em solid burlywood
+}
+.navBarHdg{
+  color: gold;
+  font-family: 'Imperial Script', cursive;
+  text-align: center;
+  font-size: 4.5em;
+  margin-left: 1.5em;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.starIcon{
+font-size: .5em;
+/* top:-5vh;  */
 }
+
+/* ******** NavBar Buttons ********* */
+
+.acctTotalNav{
+  color:gold;
+  grid-column: 3;
+  grid-row: 2;
+  margin-left: 12vw;
+  font-weight: lighter;
+  background-color: #51585e93;
+  width: 21vw;
+  font-style: italic;
+  border: 1px solid rgba(215, 252, 240, 0.781);
+  text-align: center;
+}
+
+.announcementsLink, .newannouncementLink{
+  color:goldenrod;
+  text-decoration: none;
+}
+
+.announcementsLink:hover, .newAnnouncementLink:hover{
+  color:antiquewhite;
+  text-decoration:underline;
+}
+
+.announcementsListButton{
+  background-color: #7080902d;
+  font-size: 1.5em ;
+  /* font-weight: bold; */
+  margin-left: 0;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  width: 12vw;
+  height: 42px;
+}
+
+.newAnnouncementButton{
+  background-color: #7080902d;
+  font-size: 1.5em ;
+  /* font-weight: bold; */
+  grid-column: 5;
+  grid-row: 2;
+  width: 14vw;
+  height: 42px;
+  margin-left: 5vw;
+
+}
+
+.announcmentsComponent{
+  grid-row: 2;
+  grid-template-rows: auto;
+  min-height: 5vh;
+  min-width: 6vw;
+  height: 100vh;
+  width: 99vw;
+  padding-left: .5vw;
+ 
+}
+
+.announcmentsBox{
+  grid-column-start: 2;
+  grid-column-end: 7;
+  background-image: url("./Images/cross-in-stained-window.png");
+  height: 20vh;
+  width: 72vw;
+  border: 7px solid rgb(0, 4, 128);
+  background-size: 50%;
+} 
+
+ /* ************* General Setup of Pages ************** */
+
+.welcomeMsgBkgrd{
+  /* background-color: rgba(246, 246, 233, 0.331); */
+  background-color: rgba(248, 245, 236, 0.953);
+  height: 15vh;
+  width: 59vw;
+  margin-left: 20vw;
+  border: 2px solid gray;
+}
+
+.welcomeMsg{
+  font-size: 3em;
+  text-align:center ;
+  height: 10vh;
+  font-family: 'Imperial Script', cursive; 
+  color:rgb(136, 22, 244);
+  width:98%;
+  font-style: italic;
+  font-weight: lighter;
+  margin-left: 10.99vw;
+}
+.welcomeMsg2{
+  font-size: 1.75em;
+  text-align:center ;
+  font-family: 'Meie Script', cursive;
+  color:navy;
+  width:95%;
+  height: 8vh;
+  font-weight: lighter;
+  margin-left: 5.33vw;
+}
+
+.homePage{
+  height: 90vh;
+  width: 100vw;
+  background-image: url("./Images/church-announcements-sign.png");
+  background-color: rgb(10, 49, 10);
+  background-size: cover;
+}
+
+.newPage, .editPage, .showPage{
+  height: 90vh;
+  width: 100vw;
+  background-image: url("./Images/cross-in-stained-window.png");
+  background-color: rgb(20, 118, 238);
+  display:grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-size: cover;
+}
+
+
+
+
+
+/* ************ New Announcement Form ************* */
+
+.newAnnouncementFormHdg, .editAnnouncementFormHdg{
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: bolder;
+  font-family: 'Meie Script', cursive;
+   font-family: 'Barlow', sans-serif; 
+   font-family: 'Imperial Script', cursive; 
+  color: rgb(222, 180, 238);
+}
+
+
+
+.editAnnouncementFormHdg{
+  color:rgb(13 69 33)}
+.newAnnouncementFormBox, .editAnnouncementForm{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-image: url("./Images/cross-in-stained-window.png");
+  font-weight: bold;
+  height: 71vh;
+  border: 4px solid rgb(7, 15, 94);
+}
+
+.editAnnouncementFormBkgrd{
+  background-color: rgba(248, 208, 158, 0.585);
+  height: 76vh;
+  margin: auto auto;
+  border: 5px solid rgb(40, 21, 7);
+  width: 35vw;
+  
+}
+.editAnnouncementForm{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-image: url("./Images/Screen\ Shot\ 2023-02-14\ at\ 1.15.36\ AM.png");
+  font-weight: bold;
+  height: 85vh;
+  border: 4px solid rgb(45, 15, 198);
+  background-size: cover;
+  width: 55vw;
+}
+label.editAnnouncmentForm{
+  margin-left: 2.8vw;
+  padding-right: 2vw;
+  width: 4vw;
+}
+
+.editForm{
+  background-color: rgba(228, 166, 109, 0.807);
+  border: 4px solid rgba(81, 28, 10, 0.731);
+}
+
+input#item-name{
+  margin-left: 2.8vw;
+  padding-right: 2vw;
+  width: 4vw;
+}
+
+label {
+margin-left: 9.8vw;
+padding-right: 2vw;
+}
+input[type="text" i], input[type="number" i], input[type="date" i] {
+  width: 20.6vw;
+}
+
+input#amount{
+  margin-left: 1.5vw;
+}
+input#from{
+  margin-left: 2.8vw;
+}
+input#date{
+  margin-left: 3.28vw;
+}
+input#category{
+  margin-left: .9vw;
+}
+input#description{
+  margin-left: -.39vw;
+}
+
+input[type="submit" i]{
+  /* margin-left: 20.4em; */
+  margin-left: 17.6vw;
+  width: 10.6vw;
+  font-weight: bold;
+}
+input[type="submit" i]:hover, .cancelEditButton:hover, .cancelSaveButton:hover{
+  background-color: rgb(8, 47, 7);
+  color:gold;
+}
+
+/* ******* New Announcement Form Buttons */
+
+.cancelEditButton, .cancelSaveButton{
+  width: 10.2vw;
+  margin-left: .5vw;
+  font-weight: bold;
+}
+
+/* ****** Edit Form Buttons ***** */
+
+.backButton, .editButton, .deleteButton{
+  background-color: mintcream;
+  color: darkgreen;
+  height: 5vh;
+}
+
+.backButton:hover, .editButton:hover, .deleteButton:hover{
+  background-color: aquamarine;
+}
+
+label.editLabel{
+  margin-left: .8vw;
+}
+
+input[type="submit" i]{
+  margin-left: 8.6vw;
+}
+/* ************ announcement Details ************* */
+
+ .announcementDetailsHdg{
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: bolder;
+  font-family: 'Meie Script', cursive;
+  font-family: 'Barlow', sans-serif; 
+  font-family: 'Imperial Script', cursive; 
+  color: rgb(197, 197, 26);
+}
+
+.itemDetailHdg{
+  color:goldenrod;
+  margin-right: .2em;
+  font-size: 1.25em;
+}
+.itemDetail{
+  color:wheat;
+  font-size: 1.25em;
+}
+
+
+.announcementDetails{
+  grid-column: 2;
+  margin: 0 auto;
+  /* background-color: rgba(149, 210, 249, .3); */
+  background-color: rgba(33, 29, 167, 0.763);
+  width: 39vw;
+  text-align: center;
+  font-size: 1.1em;
+  color: goldenrod;
+  border-left: 2px solid gold;
+  border-right: 2px solid gold;
+  height: 67vh;
+  border-bottom: 2px solid darkgreen;
+}
+
+
+/* **************** Error Page **************** */
+.errorPage {
+  height: 150vh;
+  width: 100vw;
+ background-color: rgb(240, 189, 147);
+}
+
+/* *********** Announcements Index ************* */
+
+.announcementsIndexPage{
+  background-image: url("./Images/Screen\ Shot\ 2023-02-15\ at\ 9.32.01\ AM.png");
+  background-size: contain;
+}
+.tableHdg{
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(7fr);
+}
+table {
+  grid-row: 2;
+  display: grid;
+  min-width: 100%;
+  grid-template-columns: 
+    minmax(10vw, .7fr)
+    minmax(10vw, .7fr)
+    minmax(10vw, .7fr)
+    minmax(10vw, .7fr)
+    minmax(10vw, .7fr)
+    minmax(10vw, .7fr)
+    minmax(10vw, .7fr);
+}
+
+td {
+  padding: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+th:last-child {
+  border: 0;
+}
+
+td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #271e08;
+  margin-left:1em;
+}
+.announcementsListHdg{
+  grid-column-start: 1;
+  grid-column-end: 7;
+  background-image: url("./Images/cross-in-stained-window.png");
+  height: 5vh;
+  width: 50vw;
+}
+
+/* ****************Index Table Headings ***************** */
+
+.tableHdgGrid{
+  display: grid;
+  grid-template-columns: repeat(6, 1.65fr);
+  /* margin-left: 5vw; */
+  width: 80vw;
+  height: 60vh;
+  padding: 3vw;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 1.1em;
+  background-color: rgba(215, 252, 240, 0.781);
+  border: 2px solid slategray
+}
+
+.th{
+  font-size: 1.2em;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.viewItem{
+  text-decoration: none;
+  text-align: center;
+  color:navy;
+}
+.viewItem:hover{
+text-decoration: underline;
+color:green;
+}
+.items{
+  text-align: center;
+  letter-spacing: .3vh;
+
+}
+
+
+

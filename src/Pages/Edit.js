@@ -5,6 +5,7 @@ function Edit() {
   return (
     <div className='editPage'>
         <h1 className='editPageHdg'>Edit This Announcement</h1>
+        < EditAnnouncementForm />
     </div>
   )
 }
