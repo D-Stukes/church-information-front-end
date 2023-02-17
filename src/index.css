@@ -265,6 +265,15 @@ font-size: .5em;
   background-size: cover;
 }
 
+.editPage{
+  background-image: url("./Images/choir-clapping.png");
+}
+
+.showPage{
+  background-image: url("./Images/glorious-brown-stained-windows-sunrays.png");
+  border-top: 3px crimson;
+}
+
 .newPage{
   height: 80vh;
   width: 100vw;
@@ -277,7 +286,9 @@ font-size: .5em;
   margin-top: 5vw;
 }
 
-
+.navShowLinkHdg, .navShowLink1, .navShowLink2{
+  color:goldenrod;
+}
 
 /* ************ New Announcement Form ************* */
 
@@ -309,8 +320,8 @@ font-size: .5em;
   color:rgb(13 69 33)}
 
 .newAnnouncementFormBox, .editAnnouncementForm{
-  grid-column-start: 2;
-  grid-column-end: 3;
+  /* grid-column-start: 2;
+  grid-column-end: 3; */
   background-image: url("./Images/cross-in-stained-window.png");
   font-weight: bold;
   height: 71vh;
@@ -397,15 +408,18 @@ input[type="submit" i]:hover, .cancelEditButton:hover, .cancelSaveButton:hover{
 
 /* ****** Edit Form Buttons ***** */
 
-.backButton, .editButton, .deleteButton{
-  background-color: mintcream;
+.announcementDetailsBackButton, .announcementDetailsEditButton, .announcementDetailsDeleteButton{
+  background-color: rgb(244, 152, 82);
   color: darkgreen;
   height: 5vh;
 }
 
-.backButton:hover, .editButton:hover, .deleteButton:hover{
+.announcementDetailsBackButton:hover, .announcementDetailsEditButton:hover, .announcementDetailsDeleteButton:hover{
   background-color: aquamarine;
 }
+
+
+
 
 label.editLabel{
   margin-left: .8vw;
@@ -439,17 +453,18 @@ input[type="submit" i]{
 
 .announcementDetails{
   grid-column: 2;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-left:3vw;
   /* background-color: rgba(149, 210, 249, .3); */
   background-color: rgba(33, 29, 167, 0.763);
   width: 39vw;
   text-align: center;
   font-size: 1.1em;
   color: goldenrod;
-  border-left: 2px solid gold;
-  border-right: 2px solid gold;
+  border: 6px solid rgba(11, 139, 32, 0.693);
   height: 67vh;
   border-bottom: 2px solid darkgreen;
+  margin-top:4vh;
 }
 
 

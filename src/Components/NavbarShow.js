@@ -20,7 +20,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className ="navbar">
+        <nav className ="navbar navbarShow">
             <video                   
                 id='navbarVideo'  muted autoplay 
                 loop  controls    alt="rolling clouds video"                
@@ -28,19 +28,19 @@ const Navbar = () => {
             /> 
             <div className='navLinkBox'>
                 {/* <span className="outerNavLink1"> */}
-                    <Link className="navLink1" to="/announcements">
+                    <Link className="navLink1 navShowLink1" to="/announcements">
                     Announcements
                     </Link>
                 {/* </span> */}
 
                 {/* <span> */}
-                    <Link to="/" className="navLinkHdg">
+                    <Link to="/" className="navLinkHdg navShowLinkHdg">
                     Church Information{" "}
                     </Link>
                 {/* </span> */}
 
                 {/* <span className="outerNavLink2"> */}
-                    <Link className="navLink2" to="/announcements/new">
+                    <Link className="navLink2 navShowLink2" to="/announcements/new">
                     New Announcement
                     </Link>
                 {/* </span> */}
