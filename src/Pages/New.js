@@ -6,9 +6,10 @@ function New() {
   return (
     <div>
         <div><NavbarNew /></div>
+        {/* <h1 className='newAnnouncementHdg'>Add a New Announcement</h1><br/> */}
+
         <div className='newPage'>
-            <h1 className='newAnnouncementHdg'>Add a New Announcement</h1>
-            <NewAnnouncmentForm />
+          <div> <NewAnnouncmentForm /></div> 
         </div>
     </div>
   )
