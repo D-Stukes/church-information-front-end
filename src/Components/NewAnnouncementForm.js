@@ -113,7 +113,7 @@ function NewAnnouncementForm() {
               id="date"
               type="text"
               name="date"
-              value={announcement.description}
+              value={announcement.date}
               placeholder="Enter the date"
               onChange={handleTextChange}
             /> <br/><br/>

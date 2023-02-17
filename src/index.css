@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Imperial+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Meie+Script&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Pinyon+Script&display=swap');
 
 /* *************** Main and NavBar ************** */
 .App{
@@ -10,36 +11,113 @@
 .main{
   background-color: rgb(174, 206, 248);
 }
-.navbar{
-  grid-row-start: 1;
-  grid-row-end: 2;
-  display: grid;
-  grid-template-columns: .25fr 1fr 3fr .25fr .25fr .25fr;
-  background-image: url("./Images/cross-in-stained-window.png");
-  background-size: cover;
+.navbarHome{
+grid-row: 1;
+  /* background-image: url("./Images/cross-in-stained-window.png"); */
+  /* background-image: url("./Images/dove-in-sky3.png"); */
+  background-size: contain;
   width: 100vw;
   height: 135px;
-  border-bottom: .75em solid burlywood
+  /* border-bottom: .75em solid burlywood */
+  margin-left: -0.4vw;
 }
+
+.navbarIndex{
+  grid-row: 1;
+  background-size: contain;
+  width: 100vw;
+  height: 135px;
+  margin-left: -0.4vw;
+  }
+
+  .navBarNew{
+    height: 100vh;
+  }
+
+.navLinkBox{
+  /* background-image: url("./Images/stained-window-blue-pink-small.png"); */
+  background-size: contain;
+  background-repeat:no-repeat;
+  /* border: 1px solid antiquewhite; */
+  height: 18vh;
+  width: 98vw;
+  margin-left: .5vw;
+  z-index: 10;
+  top: 5vh;
+  position: relative;
+  /* border-radius: 5%; */
+}
+
 .navBarHdg{
-  color: gold;
-  font-family: 'Imperial Script', cursive;
+  /* color: gold; */
+  /* font-family: 'Imperial Script', cursive; */
+  font-family: 'Oleo Script', cursive;
+/* font-family: 'Pinyon Script', cursive; */
   text-align: center;
   font-size: 4.5em;
   margin-left: 1.5em;
-  grid-column-start: 2;
-  grid-column-end: 5;
+  /* grid-column-start: 2;
+  grid-column-end: 5; */
   text-decoration: none;
 }
 
-.starIcon{
-font-size: .5em;
-/* top:-5vh;  */
+.navLinkHdg, .navLink1, .navLink2 {
+  color: rgba(14, 5, 60, 0.695);
+  /* background-color: rgba(184, 120, 37, 0.589); */
+  margin: 20px;
+  height: 5vh;
+  width: 5vh;
+  font-weight: bold;
+ 
 }
+.navLinkHdg{
+  /* color:rgb(49, 9, 76); */
+  /* color:rgb(14, 228, 247); */
+  /* color: gold; */
+  font-weight:bold;
+  font-size: 2.5em;
+  margin-bottom: 10vh;
+  /* background-color:rgba(241, 235, 186, 0.7); */
+  /* font-family: 'Oleo Script', cursive; */
+  font-stretch: 150%;
+  margin-left: 17vw;
+  font-weight:bold;
+  font-family: 'Pinyon Script', cursive;
+}
+
+.navLink1, .navLink2{
+  font-size: 1.5em;
+  font-weight:bold;
+  margin-left: 7vw;
+}
+ .navLink2{
+  margin-left: 15vw;
+}
+
+.navIndexLinkHdg{
+  margin-left: 19vw;
+}
+.navIndexLinkHdg, .navIndexLink1, .navIndexLink2 {
+  color:rgba(242, 184, 75, 0.857)
+}
+
+#navbarVideo{
+  margin: "0 auto";
+  z-index: -100;
+  height: 78vh;
+  width: 100vw;
+  /* z-index: -100; */
+  position: absolute;
+  object-fit: fill;
+}
+
+/* .starIcon{
+font-size: .5em;
+} */
 
 /* ******** NavBar Buttons ********* */
 
-.acctTotalNav{
+/* .acctTotalNav{
   color:gold;
   grid-column: 3;
   grid-row: 2;
@@ -50,9 +128,9 @@ font-size: .5em;
   font-style: italic;
   border: 1px solid rgba(215, 252, 240, 0.781);
   text-align: center;
-}
+} */
 
-.announcementsLink, .newannouncementLink{
+/* .announcementsLink, .newannouncementLink{
   color:goldenrod;
   text-decoration: none;
 }
@@ -60,30 +138,35 @@ font-size: .5em;
 .announcementsLink:hover, .newAnnouncementLink:hover{
   color:antiquewhite;
   text-decoration:underline;
-}
+} */
 
-.announcementsListButton{
+/* .announcementsListButton{
   background-color: #7080902d;
   font-size: 1.5em ;
-  /* font-weight: bold; */
+  font-weight: bold;
   margin-left: 0;
   grid-column-start: 1;
   grid-column-end: 2;
   width: 12vw;
   height: 42px;
-}
+} */
 
-.newAnnouncementButton{
+/* .newAnnouncementButton{
   background-color: #7080902d;
   font-size: 1.5em ;
-  /* font-weight: bold; */
+  font-weight: bold;
   grid-column: 5;
   grid-row: 2;
   width: 14vw;
   height: 42px;
   margin-left: 5vw;
+} */
 
-}
+
+
+
+
+
 
 .announcmentsComponent{
   grid-row: 2;
@@ -95,56 +178,81 @@ font-size: .5em;
   padding-left: .5vw;
  
 }
-
-.announcmentsBox{
-  grid-column-start: 2;
-  grid-column-end: 7;
-  background-image: url("./Images/cross-in-stained-window.png");
-  height: 20vh;
+.indexPageHdg{
+  color:rgba(229, 175, 68, 0.937);
+  text-align: center;
+  font-size: 3em;
+  font-family: 'Meie Script', cursive;
+  background-color: #48370e7e;
+}
+.indexBox{
+  /* grid-column-start: 2;
+  grid-column-end: 7; */
+  /* background-image: url("./Images/cross-in-stained-window.png"); */
+  background-color: rgba(246, 180, 93, 0.545);
+  height: 55vh;
   width: 72vw;
   border: 7px solid rgb(0, 4, 128);
   background-size: 50%;
+  margin: 0 auto;
+  font-weight: bolder;
 } 
+
+.indexItem{
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: bold;
+  color:navy;
+  font-size: 1.4em;
+}
+
 
  /* ************* General Setup of Pages ************** */
 
-.welcomeMsgBkgrd{
+.welcomeMsgBox{
   /* background-color: rgba(246, 246, 233, 0.331); */
+  width: 56.5vw;
+  height: 78vh;
+  margin-left: 19.3vw;
+  border: 2px solid rgb(196, 189, 170);
+  margin-top: 3vh;
+  background-image: url("./Images/goldFrame.png");
   background-color: rgba(248, 245, 236, 0.953);
-  height: 15vh;
-  width: 59vw;
-  margin-left: 20vw;
-  border: 2px solid gray;
+  background-size:contain ;
+  opacity: 0.7;
 }
 
-.welcomeMsg{
-  font-size: 3em;
-  text-align:center ;
+.welcomeMsg1{
+  font-size: 2.8em;
+  text-align: center;
   height: 10vh;
-  font-family: 'Imperial Script', cursive; 
-  color:rgb(136, 22, 244);
-  width:98%;
+  font-family: 'Imperial Script', cursive;
+  color: rgb(136, 22, 244);
+  width: 98%;
   font-style: italic;
-  font-weight: lighter;
-  margin-left: 10.99vw;
+  font-weight: bold;
+  margin-left: -0.01vw;
+  margin-top: 12vw;
 }
 .welcomeMsg2{
-  font-size: 1.75em;
-  text-align:center ;
+  font-size: 1.8em;
+  text-align: center;
   font-family: 'Meie Script', cursive;
-  color:navy;
-  width:95%;
+  color: rgb(15, 15, 201);
+  width: 69%;
   height: 8vh;
   font-weight: lighter;
-  margin-left: 5.33vw;
+  margin-left: 10.33vw;
 }
 
 .homePage{
   height: 90vh;
   width: 100vw;
-  background-image: url("./Images/church-announcements-sign.png");
-  background-color: rgb(10, 49, 10);
+  background-image: url("./Images/church-indoors-whitewalls-woodcharis.png");
+  background-color: rgb(158, 211, 224);
   background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: -0.4vw;
+  border-top: 13px solid rgb(168, 183, 198);
 }
 
 .newPage, .editPage, .showPage{
@@ -157,7 +265,17 @@ font-size: .5em;
   background-size: cover;
 }
 
-
+.newPage{
+  height: 80vh;
+  width: 100vw;
+  /* background-image: url("./Images/cross-in-stained-window.png"); */
+  /* background-color: rgb(42, 22, 9); */
+  z-index: 500;
+  display:grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-size: cover;
+  margin-top: 5vw;
+}
 
 
 
@@ -173,10 +291,18 @@ font-size: .5em;
   color: rgb(222, 180, 238);
 }
 
-
+.newForm{
+  width: 55vw;
+  background-color: beige;
+  opacity: .8;
+  border: 3px solid deeppink;
+  margin-top: 1em;
+  margin: 6em auto;
+}
 
 .editAnnouncementFormHdg{
   color:rgb(13 69 33)}
+  
 .newAnnouncementFormBox, .editAnnouncementForm{
   grid-column-start: 2;
   grid-column-end: 3;
@@ -197,7 +323,7 @@ font-size: .5em;
 .editAnnouncementForm{
   grid-column-start: 2;
   grid-column-end: 3;
-  background-image: url("./Images/Screen\ Shot\ 2023-02-14\ at\ 1.15.36\ AM.png");
+  background-image: url("./Images/bibleAndheart.png");
   font-weight: bold;
   height: 85vh;
   border: 4px solid rgb(45, 15, 198);
@@ -331,9 +457,15 @@ input[type="submit" i]{
 
 /* *********** Announcements Index ************* */
 
-.announcementsIndexPage{
-  background-image: url("./Images/Screen\ Shot\ 2023-02-15\ at\ 9.32.01\ AM.png");
+.indexPage{
+  background-image: url("./Images/church-inside-warm-wood-with-stained-glass.png");
   background-size: contain;
+  background-repeat:no-repeat;
+  background-color: rgba(246, 209, 246, 0.742);
+  height: 150vh;
+  width: 101vw;
+  margin-left: -0.4vw;
+  border-top: 10px solid brown;
 }
 .tableHdg{
   grid-row: 1;
@@ -406,16 +538,23 @@ td {
   text-decoration: none;
   text-align: center;
   color:navy;
+  font-family: bold;
 }
 .viewItem:hover{
 text-decoration: underline;
 color:green;
 }
 .items{
-  text-align: center;
+  /* text-align: center; */
   letter-spacing: .3vh;
-
+  /* margin-left:1.5vw; */
+  margin-right: 2vw;
 }
+  .item6, .item7{
+    margin-left:1.5vw;
+  }
+
+
 
 
 

@@ -10,15 +10,18 @@ import Edit from "./Pages/Edit"
 import Error from "./Pages/Error"
 
 //Navbar
-import Navbar from "../src/Components/Navbar"
-
-//ROUTES
+//import Navbar from "../src/Components/Navbar"
 
 function App() {
+ 
+   
+
+
+//ROUTES
     return (
         <div>
           <Router>
-            <Navbar/>
+            {/* <Navbar/>          */}
             <main>
               <Routes>
                 <Route path="/" element={<Home />}   />
