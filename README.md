@@ -34,7 +34,13 @@
 #### By having this application, it helps keep everyone one updated re: upcoming events.
 
 
-
+# Technologies
+### If you choose to clone this project, you will need to install the following packages for the front end:
+#### - React (full instructions are below)
+#### - Axios (command: npm i axios)
+#### - React Router Dom (command: npm i react-router-dom)
+#### - Link (command: npm i link)
+#### - Videos for Navbar (optional - you can replace with images or download and import videos you prefer)
 
 
 
