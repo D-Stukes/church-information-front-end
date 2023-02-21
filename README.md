@@ -21,7 +21,26 @@
 #### https://dashboard.render.com/d/dpg-cfm18a4gqg469krpi50g-a 
 
 
+# Application Description
 
+#### Hello, welcome to my Church Information Application.  This application displays church announcements
+
+# User Stories
+## Service to Visitors 
+#### Visitors can view announcments and learn of upcoming public events, that don't require membership.
+## Service to Members
+#### Members can view both public and private announcements, and edit, delete or add to either of them.
+## Service to Church Leaders
+#### By having this application, it helps keep everyone one updated re: upcoming events.
+
+
+
+
+
+
+
+
+# DIRECTIONS TO USE REACT JS
 
 # Getting Started with Create React App
 
