@@ -20,7 +20,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className ="navbar navbarShow">
+        <nav className ="navbarShow">
             <video                   
                 id='navbarVideo'  muted autoplay 
                 loop  controls    alt="rolling clouds video"                

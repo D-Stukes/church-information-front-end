@@ -12,13 +12,10 @@
   background-color: rgb(174, 206, 248);
 }
 .navbarHome{
-grid-row: 1;
-  /* background-image: url("./Images/cross-in-stained-window.png"); */
-  /* background-image: url("./Images/dove-in-sky3.png"); */
+  grid-row: 1;
   background-size: contain;
   width: 100vw;
   height: 135px;
-  /* border-bottom: .75em solid burlywood */
   margin-left: -0.4vw;
 }
 
@@ -35,35 +32,26 @@ grid-row: 1;
   }
 
 .navLinkBox{
-  /* background-image: url("./Images/stained-window-blue-pink-small.png"); */
   background-size: contain;
   background-repeat:no-repeat;
-  /* border: 1px solid antiquewhite; */
   height: 18vh;
   width: 98vw;
   margin-left: .5vw;
   z-index: 10;
   top: 5vh;
   position: relative;
-  /* border-radius: 5%; */
 }
 
 .navBarHdg{
-  /* color: gold; */
-  /* font-family: 'Imperial Script', cursive; */
   font-family: 'Oleo Script', cursive;
-/* font-family: 'Pinyon Script', cursive; */
   text-align: center;
   font-size: 4.5em;
   margin-left: 1.5em;
-  /* grid-column-start: 2;
-  grid-column-end: 5; */
   text-decoration: none;
 }
 
 .navLinkHdg, .navLink1, .navLink2 {
   color: rgba(14, 5, 60, 0.695);
-  /* background-color: rgba(184, 120, 37, 0.589); */
   margin: 20px;
   height: 5vh;
   width: 5vh;
@@ -71,14 +59,9 @@ grid-row: 1;
  
 }
 .navLinkHdg{
-  /* color:rgb(49, 9, 76); */
-  /* color:rgb(14, 228, 247); */
-  /* color: gold; */
   font-weight:bold;
   font-size: 2.5em;
   margin-bottom: 10vh;
-  /* background-color:rgba(241, 235, 186, 0.7); */
-  /* font-family: 'Oleo Script', cursive; */
   font-stretch: 150%;
   margin-left: 17vw;
   font-weight:bold;
@@ -106,63 +89,11 @@ grid-row: 1;
   z-index: -100;
   height: 78vh;
   width: 100vw;
-  /* z-index: -100; */
   position: absolute;
   object-fit: fill;
 }
 
-/* .starIcon{
-font-size: .5em;
-} */
-
-/* ******** NavBar Buttons ********* */
-
-/* .acctTotalNav{
-  color:gold;
-  grid-column: 3;
-  grid-row: 2;
-  margin-left: 12vw;
-  font-weight: lighter;
-  background-color: #51585e93;
-  width: 21vw;
-  font-style: italic;
-  border: 1px solid rgba(215, 252, 240, 0.781);
-  text-align: center;
-} */
-
-/* .announcementsLink, .newannouncementLink{
-  color:goldenrod;
-  text-decoration: none;
-}
-
-.announcementsLink:hover, .newAnnouncementLink:hover{
-  color:antiquewhite;
-  text-decoration:underline;
-} */
-
-/* .announcementsListButton{
-  background-color: #7080902d;
-  font-size: 1.5em ;
-  font-weight: bold;
-  margin-left: 0;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  width: 12vw;
-  height: 42px;
-} */
-
-/* .newAnnouncementButton{
-  background-color: #7080902d;
-  font-size: 1.5em ;
-  font-weight: bold;
-  grid-column: 5;
-  grid-row: 2;
-  width: 14vw;
-  height: 42px;
-  margin-left: 5vw;
-} */
-
-.announcmentsComponent{
+/* .announcmentsComponent{
   grid-row: 2;
   grid-template-rows: auto;
   min-height: 5vh;
@@ -171,7 +102,7 @@ font-size: .5em;
   width: 99vw;
   padding-left: .5vw;
  
-}
+} */
 .indexPageHdg{
   color:rgba(229, 175, 68, 0.937);
   text-align: center;
@@ -270,7 +201,9 @@ font-size: .5em;
 
 .showPage{
   background-image: url("./Images/glorious-brown-stained-windows-sunrays.png");
-  border-top: 3px crimson;
+}
+nav.navBarShow{
+  border-bottom: 3px solid #0e0eb5;
 }
 
 .newPage{
@@ -286,7 +219,7 @@ font-size: .5em;
 }
 
 .navShowLinkHdg, .navShowLink1, .navShowLink2{
-  color:goldenrod;
+  color:rgb(249, 191, 44);
 }
 
 /* ************ New Announcement Form ************* */
@@ -437,13 +370,23 @@ input.editFormSubmit[type="submit" i]:hover, .cancelEditButton:hover, .cancelSav
 /* ****** Edit Form Buttons ***** */
 
 .announcementDetailsBackButton, .announcementDetailsEditButton, .announcementDetailsDeleteButton{
-  background-color: rgb(244, 152, 82);
-  color: darkgreen;
-  height: 5vh;
+  background-color: rgba(244, 82, 82, 0.74);
+  color: rgb(12 211 245);
+  font-weight: bold;
+  font-size: .85em;
+  height: 4vh;
+  width: 7vw;
+  margin-left: .99vw;
+  margin-top: -4vh;
+}
+
+.announcementDetailsBackButton{
+  margin-left: 9vw;
 }
 
 .announcementDetailsBackButton:hover, .announcementDetailsEditButton:hover, .announcementDetailsDeleteButton:hover{
-  background-color: aquamarine;
+  background-color: rgb(8, 248, 220);
+  color: rgb(8, 2, 53);
 }
 
 label.editLabel{
@@ -455,7 +398,7 @@ input[type="submit" i]{
 }
 /* ************ announcement Details ************* */
 
- .announcementDetailsHdg{
+ /* .announcementDetailsHdg{
   font-size: 2.5em;
   text-align: center;
   font-weight: bolder;
@@ -463,9 +406,9 @@ input[type="submit" i]{
   font-family: 'Barlow', sans-serif; 
   font-family: 'Imperial Script', cursive; 
   color: rgb(197, 197, 26);
-}
+} */
 
-.itemDetailHdg{
+/* .itemDetailHdg{
   color:goldenrod;
   margin-right: .2em;
   font-size: 1.25em;
@@ -473,24 +416,69 @@ input[type="submit" i]{
 .itemDetail{
   color:wheat;
   font-size: 1.25em;
+} */
+
+.announcementDetailsBox{
+  z-index: 100;
+  grid-column: 2;
+  margin-left: 1.2vw;
+  background-color: rgba(251, 241, 203, 0.383);
+  width: 43vw;
+  text-align: center;
+  font-size: 1.1em;
+  border: 2px solid rgba(6, 250, 222, 0.893);
+  height: 85vh;
+  margin-top: 2vh;
 }
 
 .announcementDetails{
   grid-column: 2;
-  /* margin: 0 auto; */
-  margin-left:3vw;
-  /* background-color: rgba(149, 210, 249, .3); */
-  background-color: rgba(33, 29, 167, 0.763);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 9% 9% 9% 9% 9% 9% 9%;
+  margin-left: 1.6vw;
+  grid-row-gap: .1vh;
+  background-color: rgba(34, 29, 167, 0.712);
   width: 39vw;
   text-align: center;
-  font-size: 1.1em;
-  color: goldenrod;
-  border: 6px solid rgba(11, 139, 32, 0.693);
-  height: 67vh;
-  border-bottom: 2px solid darkgreen;
-  margin-top:4vh;
+  font-size: .95em;
+  color: rgb(255, 238, 0);
+  border: 6px solid rgba(199, 35, 10, 0.893);
+  height: 79vh;
+  margin-top: 2.5vh;
+  font-weight: 540;
 }
-
+.detailHeader{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+}
+.detailHdg{
+  display: inline-block;
+  grid-column: 1;
+  text-align: left;
+  margin-left: 3vw;
+}
+.dHdg9{
+  grid-column: 2;
+  margin-left: -7vw;
+}
+.detail{
+  color: rgb(172 9 137);
+  grid-column: 2;
+  text-align: left;
+  margin-top: 2.5vh;
+  font-size: 1.2em;
+  background-color: rgb(240 230 199 / 82%);
+  border: 2px solid #00ff91a1;
+  margin-left: -7vw;
+  height: max-content;
+  width: 23vw;
+}
+.announcementNavButtons{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 
 /* **************** Error Page **************** */
 .errorPage {
