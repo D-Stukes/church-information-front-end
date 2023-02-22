@@ -22,6 +22,12 @@ const [announcements, setAnnouncements] = useState([])
 
   return (
     <div className='indexBox'>
+        <thead>
+          <th>Church Name</th>
+          <th>Announcement Title</th>
+          <th>Type</th>
+          <th>Date</th>
+        </thead>
       <p className='indexItem'>
         {  
          announcements.map((announcement) =>{

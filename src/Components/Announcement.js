@@ -7,13 +7,20 @@ const Announcement = ({announcement, id}) => {
     return (
      <div className='tableDataGrid'>
    
-            <span className='viewItem'><Link to={`/announcements/${id}`}>View this entry</Link></span>
-            <span className='items item1'> {announcement.item_name}</span>
-            <span className='items item2'> {announcement.amount}</span>
-            <span className='items item3'> {announcement.date}</span>
-            <span className='items item4'> {announcement.category}</span>
-            <span className='items item5'> {announcement.from}</span>
-            <span className='items item6'> {announcement.description}</span>
+            {/* <span className='viewItem'>
+                <Link to={`/announcements/${id}`}>View this entry</Link></span> */}
+            <table>
+
+            <tbody>
+                <tr>
+                    <td className='items item1'> <Link to={`/announcements/${id}`}>{announcement.church_name}</Link></td>
+                    <td className='items item2'> {announcement.title}</td>
+                    <td className='items item3'> {announcement.type}</td>
+                    <td className='items item4'> {announcement.date}</td>
+                </tr>
+            </tbody>
+            </table>
+            
 
       
    

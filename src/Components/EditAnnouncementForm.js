@@ -17,7 +17,7 @@ function EditAnnouncementForm() {
     time:'',
     contributor: '',
     is_member: false,
-    is_public: false,
+    is_public: true,
   })
 
   const updateAnnouncement = (updatedAnnouncement) => {
@@ -44,25 +44,25 @@ function EditAnnouncementForm() {
   };
 
   useEffect(() => {
-    axios.get(`${API}/announcements/${id}`).then(
-      (response) => setAnnouncement(response.data),
+      axios
+      .get(`${API}/announcements/${id}`)
+      .then((response) => {
+        setAnnouncement(response.data);
+      })
+      .catch((c) => {navigate("/error");
+      });
+  }, [id]);
       
-
-      (error) => navigate(`/not-found`)
-      
-    );
-  }, [id, navigate]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     updateAnnouncement(announcement, id);
-    
   };
 
   
   return (
     <div className="edit">
-      <form  className='editForm' onSubmit={handleSubmit}>
+      <form   onSubmit={handleSubmit}className='editForm'>
         <br/><br/>
         <label htmlFor="church_name">Church Name:</label>
             <input
@@ -77,9 +77,10 @@ function EditAnnouncementForm() {
             <input
               id="title"
               type="text"
-              required
+              name="title"
               value={announcement.title}
-              placeholder="Enter name of title"
+              placeholder="Enter announcement title"
+              required
               onChange={handleTextChange}
             /> <br/><br/>
 
