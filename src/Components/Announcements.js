@@ -22,19 +22,23 @@ const [announcements, setAnnouncements] = useState([])
 
   return (
     <div className='indexBox'>
-        <thead>
-          <th>Church Name</th>
-          <th>Announcement Title</th>
-          <th>Type</th>
-          <th>Date</th>
-        </thead>
-      <p className='indexItem'>
-        {  
-         announcements.map((announcement) =>{
-          return <Announcement key={announcement.id} announcement={announcement} id={announcement.id} />
-          })
-        }
-     </p>
+          <thead>
+            <th className='indexTableHdg th1'>Church Name</th>
+            <th className='indexTableHdg th2'>Announcement Title</th>
+            <th className='indexTableHdg th3'>Type</th>
+            <th className='indexTableHdg th4'>Date</th>
+          </thead>
+      <table>
+          <tbody>
+          <span className='indexItem'>
+            {  
+            announcements.map((announcement) =>{
+              return <Announcement key={announcement.id} announcement={announcement} id={announcement.id} />
+              })
+            }
+        </span>
+        </tbody>
+    </table>
     </div>
   )
 }

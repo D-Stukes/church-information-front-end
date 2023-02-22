@@ -162,12 +162,6 @@ font-size: .5em;
   margin-left: 5vw;
 } */
 
-
-
-
-
-
-
 .announcmentsComponent{
   grid-row: 2;
   grid-template-rows: auto;
@@ -189,7 +183,8 @@ font-size: .5em;
   /* grid-column-start: 2;
   grid-column-end: 7; */
   /* background-image: url("./Images/cross-in-stained-window.png"); */
-  background-color: rgba(246, 180, 93, 0.545);
+  /* background-color: rgba(246, 180, 93, 0.545); */
+  background-color: rgba(250, 211, 160, 0.618);
   height: 55vh;
   width: 72vw;
   border: 7px solid rgb(0, 4, 128);
@@ -198,11 +193,15 @@ font-size: .5em;
   font-weight: bolder;
 } 
 
+.indexTableRow{
+  display: grid;
+}
+
 .indexItem{
   font-family: Arial, Helvetica, sans-serif;
   font-family: bold;
   color:navy;
-  font-size: 1.4em;
+  font-size: 1.1em;
 }
 
 
@@ -303,12 +302,12 @@ font-size: .5em;
 }
 
 .newForm{
-  width: 55vw;
+  width: 50vw;
   background-color: beige;
   opacity: .8;
-  border: 3px solid deeppink;
+  border: 5px solid deeppink;
   margin-top: 1em;
-  margin-left:20vw
+  margin-left: 23vw;
 }
 
 .newAnnouncementHdg{
@@ -364,36 +363,65 @@ input#item-name{
 }
 
 label {
-margin-left: 9.8vw;
+margin-left: 6.8vw;
 padding-right: 2vw;
+font-size: 1.1em;
+font-family: bolder;
 }
 input[type="text" i], input[type="number" i], input[type="date" i] {
-  width: 20.6vw;
+  width: 26.6vw;
+  height: 3vh;
 }
 
-input#amount{
-  margin-left: 1.5vw;
-}
-input#from{
-  margin-left: 2.8vw;
-}
-input#date{
-  margin-left: 3.28vw;
-}
-input#category{
-  margin-left: .9vw;
+input#title{
+  margin-left: 4.6vw;
 }
 input#description{
-  margin-left: -.39vw;
+  margin-left: 1.1vw;
 }
-
-input[type="submit" i]{
-  /* margin-left: 20.4em; */
-  margin-left: 17.6vw;
-  width: 10.6vw;
+input#type{
+  margin-left: 4.4vw;
+}
+input#location{
+  margin-left: 2.46vw;
+}
+input#date{
+  margin-left: 4.5vw;
+}
+input#time{
+  margin-left: 4.2vw;
+}
+input#contributor{
+  margin-left: 1.05vw;
+}
+input#is_member{
+  margin-left: 2.6vw;
+}
+input#is_public{
+  margin-left: 3.6vw;
+}
+input.newFormSubmit[type="submit" i]{
+  margin-left: 19vw;
+  width: 9vw;
+  height: 3.5vh ;
   font-weight: bold;
 }
-input[type="submit" i]:hover, .cancelEditButton:hover, .cancelSaveButton:hover{
+
+.cancelNewButton{
+  margin-left: 3vw;
+  width: 9vw;
+  height: 3.5vh ;
+}
+
+input.newFormSubmit[type="submit" i], .cancelNewButton{
+  background-color: rgba(249, 212, 117, 0.915);
+  color:rgb(234, 9, 246);
+}
+input.newFormSubmit[type="submit" i]:hover, .cancelNewButton:hover{
+  background-color: rgba(247, 9, 132, 0.926);
+  color:rgb(248, 244, 7);
+}
+input.editFormSubmit[type="submit" i]:hover, .cancelEditButton:hover, .cancelSaveButton:hover{
   background-color: rgb(8, 47, 7);
   color:gold;
 }
@@ -417,9 +445,6 @@ input[type="submit" i]:hover, .cancelEditButton:hover, .cancelSaveButton:hover{
 .announcementDetailsBackButton:hover, .announcementDetailsEditButton:hover, .announcementDetailsDeleteButton:hover{
   background-color: aquamarine;
 }
-
-
-
 
 label.editLabel{
   margin-left: .8vw;
@@ -450,7 +475,6 @@ input[type="submit" i]{
   font-size: 1.25em;
 }
 
-
 .announcementDetails{
   grid-column: 2;
   /* margin: 0 auto; */
@@ -477,6 +501,11 @@ input[type="submit" i]{
 
 /* *********** Announcements Index ************* */
 
+
+.indexItemLink{
+  color: blue;
+}
+
 .indexPage{
   background-image: url("./Images/church-inside-warm-wood-with-stained-glass.png");
   background-size: contain;
@@ -492,7 +521,7 @@ input[type="submit" i]{
   display: grid;
   grid-template-columns: repeat(7fr);
 }
-table {
+table, thead {
   grid-row: 2;
   display: grid;
   min-width: 100%;
@@ -500,25 +529,35 @@ table {
     minmax(10vw, .7fr)
     minmax(10vw, .7fr)
     minmax(10vw, .7fr)
-    minmax(10vw, .7fr)
-    minmax(10vw, .7fr)
-    minmax(10vw, .7fr)
     minmax(10vw, .7fr);
+  grid-template-rows: auto;
+}
+tbody{
+  display: grid;
+}
+.th1 {
+  grid-column: 1;
+}
+.th2 {
+  grid-column: 2;
+}
+.th3 {
+  grid-column: 3;
+}
+.th4 {
+  grid-column: 4;  
 }
 
+
+/* th:last-child {
+  border: 0;
+} */
+
 td {
-  padding: 2px;
+
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-
-th:last-child {
-  border: 0;
-}
-
-td {
   padding-top: 10px;
   padding-bottom: 10px;
   color: #271e08;

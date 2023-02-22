@@ -18,6 +18,7 @@ const Navbar = () => {
     useEffect(() => {
       tryPlay();
     }, []);
+// note: this effect will work without the dependency array because the useRef function "tryPlay" doesn't render with the initial render of the return, it will not create an infinite loop
 
     return (
         <nav className ="navbar">

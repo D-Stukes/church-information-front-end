@@ -138,28 +138,28 @@ function NewAnnouncementForm() {
               onChange={handleTextChange}
             /><br/><br/>
 
-            <label htmlFor="is_member">Member:</label> <br/>
+            <label htmlFor="is_member">Member:</label>
             <input
               id="is_member"
               type="checkbox"
               onChange={handleCheckboxChange1}
               checked={announcement.is_member}
-            /> <br/><br/><br/>
+            /> <br/><br/>
 
-            <label htmlFor="is_public">public:</label>
-            <br/>
+            <label htmlFor="is_public">Public:</label>
             <input
               id="is_public"
               type="checkbox"
               onChange={handleCheckboxChange2}
               checked={announcement.is_public}
-            /> <br/><br/><br/>
+            /> <br/>
 
-            <input type="submit" />
-            <br/><br/>
+            <input 
+              className='newFormSubmit'
+              type="submit" />
             <Link to={`/announcements/`}>
             <button className='cancelNewButton'>Cancel</button>
-          </Link>
+          </Link> <br/><br/>
         </form>
       </div>
   )

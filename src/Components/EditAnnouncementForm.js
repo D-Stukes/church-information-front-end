@@ -160,7 +160,9 @@ function EditAnnouncementForm() {
             />
         <br/><br/>
 
-        <input type="submit" /> <br/>
+        <input 
+        className='editFormSubmit'
+          type="submit" /> <br/>
         <Link to={`/announcements`}>
         <button className='cancelEditButton'>Cancel Edit</button>
       </Link>
