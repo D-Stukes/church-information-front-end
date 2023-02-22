@@ -124,8 +124,11 @@
   font-weight: bolder;
 } 
 
-.indexTableRow{
+.indexTableRow, thead{
   display: grid;
+  /* grid-template-columns: 1.25fr 1.25fr .5fr 1fr; */
+  grid-template-columns: .25fr .25fr .15fr .25fr;
+  width: 84vw;
 }
 
 .indexItem{
@@ -185,7 +188,7 @@
   border-top: 13px solid rgb(168, 183, 198);
 }
 
-.newPage, .editPage, .showPage{
+.newPage, .showPage{
   height: 90vh;
   width: 100vw;
   background-image: url("./Images/cross-in-stained-window.png");
@@ -196,7 +199,10 @@
 }
 
 .editPage{
+  height: 90vh;
+  width: 100vw;
   background-image: url("./Images/choir-clapping.png");
+  background-size: cover;
 }
 
 .showPage{
@@ -284,11 +290,45 @@ label.editAnnouncmentForm{
   width: 4vw;
 }
 
+.editFormBox{
+  display: grid;
+  grid-template-columns: .5fr 3fr .5fr;
+}
+
+.editFormHdg{
+  grid-column: 2;
+  text-align: center;
+  color: #cb0202;
+  font-family: 'Pinyon Script', cursive;
+  font-size: 3.2em;
+  justify-content: center;
+  margin-left: -5vw;
+  display: inline;
+  background-color: #f1ebd38c;
+  border: 0.5px solid maroon;
+}
+
 .editForm{
   background-color: rgba(228, 166, 109, 0.807);
   border: 4px solid rgba(81, 28, 10, 0.731);
+  grid-column: 2;
+  width: 50vw;
+  margin-left: 11vw;
 }
 
+label.editForm{
+  margin-left:4vw;
+}
+
+input.editFormSubmit[type="submit" i], .cancelEditButton{
+  background-color: rgba(141, 8, 88, 0.915);
+  color:rgb(246, 211, 9);
+  margin-left:19vw;
+}
+input.editFormSubmit[type="submit" i]:hover, .cancelEditButton:hover{
+  background-color: rgb(170, 230, 233);
+  color:rgb(51, 9, 71);
+}
 input#item-name{
   margin-left: 2.8vw;
   padding-right: 2vw;
@@ -301,9 +341,10 @@ padding-right: 2vw;
 font-size: 1.1em;
 font-family: bolder;
 }
-input[type="text" i], input[type="number" i], input[type="date" i] {
+input[type="text" i] {
   width: 26.6vw;
   height: 3vh;
+  border: 2.25px solid brown;
 }
 
 input#title{
@@ -354,7 +395,7 @@ input.newFormSubmit[type="submit" i]:hover, .cancelNewButton:hover{
   background-color: rgba(247, 9, 132, 0.926);
   color:rgb(248, 244, 7);
 }
-input.editFormSubmit[type="submit" i]:hover, .cancelEditButton:hover, .cancelSaveButton:hover{
+ .cancelSaveButton:hover{
   background-color: rgb(8, 47, 7);
   color:gold;
 }
@@ -504,25 +545,24 @@ input[type="submit" i]{
   margin-left: -0.4vw;
   border-top: 10px solid brown;
 }
-.tableHdg{
+/* .tableHdg{
   grid-row: 1;
   display: grid;
-  grid-template-columns: repeat(7fr);
-}
-table, thead {
-  grid-row: 2;
-  display: grid;
-  min-width: 100%;
-  grid-template-columns: 
-    minmax(10vw, .7fr)
-    minmax(10vw, .7fr)
-    minmax(10vw, .7fr)
-    minmax(10vw, .7fr);
-  grid-template-rows: auto;
-}
+  grid-template-columns: repeat(4fr);
+} */
+
 tbody{
   display: grid;
 }
+
+.th1, .th2, .th3, .th4, .th5, .th6 {
+  text-align: left;
+  margin-left: 1.5vw;
+  font-size: 1.3em;
+  color: maroon;
+}
+
+
 .th1 {
   grid-column: 1;
 }

@@ -8,7 +8,7 @@ function Edit() {
     <div>
       <div><NavbarEdit /></div>
       <div className='editPage'>
-          <h1 className='editPageHdg'>Edit This Announcement</h1>
+          {/* <span className='editPageHdg'>Edit This Announcement</span> */}
           < EditAnnouncementForm />
       </div>
     </div>

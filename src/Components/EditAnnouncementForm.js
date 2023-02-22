@@ -61,8 +61,10 @@ function EditAnnouncementForm() {
 
   
   return (
-    <div className="edit">
+    <div className="editFormBox">
+ <h1 className='editFormHdg'>Edit This Announcement</h1>
       <form   onSubmit={handleSubmit}className='editForm'>
+     
         <br/><br/>
         <label htmlFor="church_name">Church Name:</label>
             <input
@@ -134,40 +136,37 @@ function EditAnnouncementForm() {
               onChange={handleTextChange}
             /><br/><br/>
 
-            <label htmlFor="contributor">Contributor:</label> <br/>
+            <label htmlFor="contributor">Contributor:</label> 
             <input
               id="contributor"
-              type="checkbox"
+              type="text"
               onChange={handleTextChange}
               checked={announcement.contributor}
-            /> <br/><br/><br/>
+            /> <br/><br/>
 
-            <label htmlFor="is_member">Member:</label> <br/>
+            <label htmlFor="is_member">Member:</label> 
             <input
               id="is_member"
               type="checkbox"
               onChange={handleCheckboxChange1}
               checked={announcement.is_member}
-            /> <br/><br/><br/>
+            /> <br/><br/>
 
             <label htmlFor="is_public">public:</label>
-            <br/>
             <input
               id="is_public"
               type="checkbox"
               onChange={handleCheckboxChange2}
               checked={announcement.is_public}
-            />
-        <br/><br/>
+            /><br/>
 
         <input 
         className='editFormSubmit'
-          type="submit" /> <br/>
+          type="submit" />
         <Link to={`/announcements`}>
         <button className='cancelEditButton'>Cancel Edit</button>
-      </Link>
+      </Link><br/><br/>
       </form>
-     
     </div>
   );
 }
