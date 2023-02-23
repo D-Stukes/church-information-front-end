@@ -20,7 +20,11 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className ="navbarShow">
+        <nav className ="navbarShow" style={{borderBottom: '3px solid #0e0eb5', height: '13vh'}}
+         >
+
+{/* <div style={{ color: 'blue', lineHeight : 10, padding: 20 }}>  */}
+
             <video                   
                 id='navbarVideo'  muted autoplay 
                 loop  controls    alt="rolling clouds video"                

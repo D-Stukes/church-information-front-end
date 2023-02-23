@@ -30,7 +30,9 @@
   .navBarNew{
     height: 100vh;
   }
-
+.navBarShow{
+  height: 50vh;
+}
 .navLinkBox{
   background-size: contain;
   background-repeat:no-repeat;
@@ -207,9 +209,6 @@
 
 .showPage{
   background-image: url("./Images/glorious-brown-stained-windows-sunrays.png");
-}
-nav.navBarShow{
-  border-bottom: 3px solid #0e0eb5;
 }
 
 .newPage{
@@ -416,13 +415,14 @@ input.newFormSubmit[type="submit" i]:hover, .cancelNewButton:hover{
   font-weight: bold;
   font-size: .85em;
   height: 4vh;
-  width: 7vw;
-  margin-left: .99vw;
+  width: 6vw;
+  margin-left: .90vw;
   margin-top: -4vh;
 }
 
 .announcementDetailsBackButton{
   margin-left: 9vw;
+  width: 9vw;
 }
 
 .announcementDetailsBackButton:hover, .announcementDetailsEditButton:hover, .announcementDetailsDeleteButton:hover{
@@ -642,6 +642,7 @@ color:green;
   }
 
 
+  
 
 
 

@@ -43,34 +43,32 @@ function EditAnnouncementForm() {
     setAnnouncement({ ...announcement, is_public: !announcement.is_public });
   };
 
-  useEffect(() => {
-      axios
-      .get(`${API}/announcements/${id}`)
-      .then((response) => {
-        setAnnouncement(response.data);
-      })
-      .catch((c) => {navigate("/error");
-      });
-  }, [id]);
-      
 
   const handleSubmit = (event) => {
     event.preventDefault();
     updateAnnouncement(announcement, id);
   };
 
-  
+  useEffect(() => {
+      axios
+      .get(`${API}/announcements/${id}`)
+      .then(
+        (response) => setAnnouncement(response.data),
+      (error) => navigate('/error')
+      );
+  }, [id, navigate]);
+      
   return (
     <div className="editFormBox">
  <h1 className='editFormHdg'>Edit This Announcement</h1>
-      <form   onSubmit={handleSubmit}className='editForm'>
-     
+      <form onSubmit={handleSubmit}className='editForm'>
         <br/><br/>
         <label htmlFor="church_name">Church Name:</label>
             <input
               id="church_name"
-              value={announcement.church_name}
               type="text"
+              name="church_name"
+              value={announcement.church_name}
               onChange={handleTextChange}
               placeholder="Please enter the church's name"
               required

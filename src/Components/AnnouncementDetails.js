@@ -61,7 +61,7 @@ useEffect(() => {
 
     <div className="announcementNavButtons">
     
-          <Link to={`/announcements`}><button className="announcementDetailsBackButton">Back</button></Link>
+          <Link to={`/announcements`}><button className="announcementDetailsBackButton">Return to List</button></Link>
       
           <Link to={`/announcements/${id}/edit`}> <button className="announcementDetailsEditButton">Edit</button></Link>
       
